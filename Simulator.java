@@ -46,6 +46,11 @@ public class Simulator{
 				Route = this.ROUTE_LIST.get(Route_ID);
 				Stop = this.STOP_LIST.get(Stop_iD);
 				Route.addStop(Stop);
+
+				for(Bus x: BUS_LIST.values()){
+					if(x.getRoute() == Route_ID){
+						x.addStop(Stop);
+					}
 			}
 			else{
 				System.out.println("State Unchanged. STOPID not found");
