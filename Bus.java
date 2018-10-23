@@ -12,7 +12,7 @@ public class Bus{
 	
 	//BUS OBJECT REQUIREMNTS 
 	//add_bus,<ID>,<Route>,<Location>,<Initial-Passengers>,<Passenger-Capacity>,<Initial-Fuel>,<Fuel-Capacity>,<Speed>
-	public BUS(int Bus_Id, int Cur_Pass, int Max_Pass, double Cur_Fuel, double Max_Fuel, double Speed){
+	public Bus(int Bus_Id, int Cur_Pass, int Max_Pass, double Cur_Fuel, double Max_Fuel, double Speed){
 		this.BUS_ID = Bus_Id;
 		this.CURRENT_PASSENGERS = Cur_Pass;
 		this.PASSENGER_CAP = Max_Pass;
@@ -21,7 +21,8 @@ public class Bus{
 		this.SPEED = Speed;
 	}
 
-	public void getRoute(){
+	public int  getRoute(){
+		return BUS_ID; 
 	}
 
 	public void addStop(BusStop Stop){

@@ -2,9 +2,9 @@ package MRT;
 import java.util.HashMap;
 
 public class Simulator{
-	private HashMap <int, Bus> BUS_LIST;
-	private HashMap <int, Route> ROUTE_LIST;
-	private HashMap <int, BusStop> STOP_LIST;
+	private HashMap <Integer, Bus> BUS_LIST;
+	private HashMap <Integer, BusRoute> ROUTE_LIST;
+	private HashMap <Integer, BusStop> STOP_LIST;
 
 	public Simulator(){
 	}
@@ -41,16 +41,17 @@ public class Simulator{
 	 *
 	  */
 	public void extend_route(int RouteID, int StopID){
-		if(this.ROUTE_LIST.containsKey(RouteID){
-			if(this.STOP_LIST.containsKey(StopID){
-				Route = this.ROUTE_LIST.get(Route_ID);
-				Stop = this.STOP_LIST.get(Stop_iD);
+		if(this.ROUTE_LIST.containsKey(RouteID)){
+			if(this.STOP_LIST.containsKey(StopID)){
+				BusRoute Route = this.ROUTE_LIST.get(RouteID);
+				BusStop Stop = this.STOP_LIST.get(StopID);
 				Route.addStop(Stop);
 
 				for(Bus x: BUS_LIST.values()){
-					if(x.getRoute() == Route_ID){
+					if(x.getRoute() == RouteID){
 						x.addStop(Stop);
 					}
+				}
 			}
 			else{
 				System.out.println("State Unchanged. STOPID not found");

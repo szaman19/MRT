@@ -4,8 +4,8 @@ public class BusStop{
 	private Location LOCATION;
 	private int STOP_ID;
 	private String STOP_NAME;
-	boolean 
-	public BusStop(Location LOCATION, int STOP_ID, string STOP_NAME){
+	
+	public BusStop(Location LOCATION, int STOP_ID, String STOP_NAME){
 		this.LOCATION = LOCATION;
 		this.STOP_ID = STOP_ID;
 		this.STOP_NAME = STOP_NAME;
